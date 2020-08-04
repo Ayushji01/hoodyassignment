@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bookroom</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="jaiho" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="first_name" placeholder="First Name"><br>
+        <input type="text" name="last_name" placeholder="Last Name"><br>
+        <input type="number" name="room_number" placeholder="Roomnumber"><br>
+        <input type="str" name="number" placeholder="Mobilenumber"><br>
+        <span>check_in_date</span>
+        <input type="date" name="check_in_date" placeholder="Year-Month-Date"><br>
+        <span>check_out_date</span>
+        <input type="date" name="check_out_date" placeholder="Year-Month-Date"><br>
+        <span>check_in_time</span>
+        <input type="time" name="check_in_time" placeholder="Check_In_Time"><br>
+        <span>check_out_time</span>
+        <input type="time" name="check_out_time" placeholder="Check_Out_Time"><br>
+        <input type="submit">
+
+
+    </form>
+
+    <div>
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+
+   
+</body>
+</html>

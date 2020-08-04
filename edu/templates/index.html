@@ -1,0 +1,266 @@
+{% load static %}
+{% static "assets/img/gallery" as baseUrl %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Hoodys | Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+
+	<!-- CSS here -->
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/gijgo.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+    <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'assets/img/logo/loder.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-top d-none d-lg-block">
+                  
+                    
+                    <div class="container">
+                        <div class="col-xl-12">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="header-info-left">
+                                    <ul>     
+                                        <li>walememe32@gmail.com</li>
+                                        <li>9981441294</li>
+                                    </ul>
+                                </div>
+                                <div class="header-info-right">
+                                    <ul>{% if user.is_authenticated %}
+                                        <li>Hello, {{user.first_name}}</li>
+                                        <li><a href="accounts/logout"><i class="ti-lock"></i>Logout</a></li>
+                                        {% else %}
+                                        <li><a href="accounts/register"><i class="ti-lock"></i>Register</a></li>
+                                        <li><a href="accounts/login"><i class="ti-lock"></i>Login</a></li>
+                                    
+                                    
+                                        {% endif %}
+
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom header-sticky">
+                    <!-- Logo -->
+                    <div class="logo d-none d-lg-block">
+                        <a href="index.html"><img src="{% static 'assets/img/logo/company name 1.png' %}" alt=""></a>
+                    </div>
+                    <div class="container">
+                        <div class="menu-wrapper">
+                            <!-- Logo -->
+                            <div class="logo logo2 d-block d-lg-none">
+                                <a href="index.html"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
+                            </div>
+                          
+                           
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? slider Area Start-->
+        <div class="slider-area ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6 col-lg-7 col-md-8">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".2s">BEST HOTEL BOOKING WEBSITE</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s">Booking  = Don't Worry We Are Here</h1>
+                                    <!-- Hero-btn -->
+                                    <div class="hero__btn">
+                                        <a href="accounts/register" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Get Started</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-5">
+                                <div class="hero-man d-none d-lg-block f-right" data-animation="jello" data-delay=".4s">
+                                    <img src="{% static 'assets/img/hero/hotelimg.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6 col-lg-7 col-md-8">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".2s">We Are Here For You</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s">The New Way To Learn Properly in With Us!</h1>
+                                    <!-- Hero-btn -->
+                                    <div class="hero__btn">
+                                        <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Get Started</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-5">
+                                <div class="hero-man d-none d-lg-block f-right" data-animation="jello" data-delay=".4s">
+                                    <img src="{% static 'assets/img/hero/heroman.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End -->
+        
+       
+                                     
+    
+        <!--? Popular Course Start -->
+        <div class="popular-course section-padding30">
+            <div class="container">
+                <div class="row justify-content-sm-center">
+                    <div class="cl-xl-7 col-lg-8 col-md-10">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-70">
+                            <span>For Booking your Room Please Register</span>
+                            <h2>After Registration Do Log in And see room availability,book your room</h2>
+                        </div> 
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        {% if user.is_authenticated %}
+                        {% for roomd in rooms %}
+                         <!-- Single course -->
+                         <div class="single-course mb-40">
+                            <div class="course-img">
+                                <img src="{{roomd.room_image.url}}" alt="">
+                            </div>
+                            <div class="course-caption">
+                                <div class="course-cap-top">
+                                    <h4><a >{{roomd.room_name}}</a></h4>
+                                </div>
+                                <div class="course-cap-mid d-flex justify-content-between">
+                                    <div class="course-ratting">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <ul><li>52 Review</li></ul>
+                                </div>
+                                <div class="course-cap-bottom d-flex justify-content-between">
+                                    <ul>
+                                        {% if roomd.room_availability %}
+                                        <span>AVAILABLE</span>
+                                        {% else %}
+                                        <span>NOT AVAILABLE</span>
+                                            {% endif %}
+                                            <ul><li>price {{roomd.room_price}}</li></ul>
+                                    </ul>
+                                    {% if roomd.room_availability %}
+                                    <h6><a href="bookroom/jaiho">BOOK ROOM</a></h6>
+                                    {% endif %}
+                                    
+                                </div>
+                            </div>
+                        {% endfor %}
+                        {% endif %}
+                        </div>
+                    </div>       
+                </div>
+            </div>
+        </div>
+                
+        
+      
+       
+                              
+    
+        
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+
+    <script src="{% static './assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="{% static './assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static './assets/js/popper.min.js' %}"></script>
+    <script src="{% static './assets/js/bootstrap.min.js' %}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="{% static './assets/js/jquery.slicknav.min.js' %}"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="{% static './assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static './assets/js/slick.min.js' %}"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="{% static './assets/js/wow.min.js' %}"></script>
+    <script src="{% static './assets/js/animated.headline.js' %}"></script>
+    <script src="{% static './assets/js/jquery.magnific-popup.js' %}"></script>
+
+    <!-- Date Picker -->
+    <script src="{% static './assets/js/gijgo.min.js' %}"></script>
+    <!-- Nice-select, sticky -->
+    <script src="{% static './assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static './assets/js/jquery.sticky.js' %}"></script>
+    
+    <!-- counter , waypoint -->
+    <script src="{% static './assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static './assets/js/waypoints.min.js' %}"></script>
+    
+    <!-- contact js -->
+    <script src="{% static './assets/js/contact.js' %}"></script>
+    <script src="{% static './assets/js/jquery.form.js' %}"></script>
+    <script src="{% static './assets/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static './assets/js/mail-script.js' %}"></script>
+    <script src="{% static './assets/js/jquery.ajaxchimp.min.js' %}"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="{% static './assets/js/plugins.js' %}"></script>
+    <script src="{% static './assets/js/main.js' %}"></script>
+    
+    </body>
+</html>
